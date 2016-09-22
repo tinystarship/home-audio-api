@@ -14,16 +14,16 @@ caption{ font-weight: bold;}
 <h3>What is this script</h3>
 <p>In the fall of 2015 I purchased a whole home audio controller from monoprice. I wanted to control it from my phone. I taught myself Swift and released an app called Home Audio. It required a special ethernet -> serial adapter to hookup the monoprice's serial adapter to the network, but it worked great. I had a Raspberry Pi 2 sitting in a box looking for a project, so I decided to create a simple Web API for a cheaper option.</p>
 
-<p></p>Please be aware, this is not the fastest thing in the world. We're going across a serial port. To refresh the status of everything can take some time. Pushing commands should be pretty quick though, I've gotten responses in 1-2 seconds.</p>
+<p>Please be aware, this is not the fastest thing in the world. We're going across a serial port. To refresh the status of everything can take some time. Pushing commands should be pretty quick though, I've gotten responses in 1-2 seconds.</p>
 
 <h3>Requirements</h3>
 
-<h3>To actually use this script, you need a few things:</h3>
+<p>To actually use this script, you need a few things:</p>
 <ul>
-    <li>Monoprice Whole Home Audio Controller.</li>
-    <li>Raspberry Pi 2 (any computer that can run python will work, this is just what I used)</li>
-    <li>USB -> Serial Adapter (not needed if you have a computer with a serial port)</li>
-    <li>10 foot Serial cord</li>
+    <li><a href="http://www.monoprice.com/product?p_id=10761">Monoprice Whole Home Audio Controller</a></li>
+    <li><a href="https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=raspberry+pi+">Raspberry Pi 2</a> (any computer that can run python will work, this is just what I used)</li>
+    <li><a href="https://www.amazon.com/TRENDnet-TU-S9-USB-Serial-Converter/dp/B0007T27H8/ref=sr_1_1?ie=UTF8&qid=1474572139&sr=8-1&keywords=TRENDnet+TU-S9+USB+to+Serial+Converter">USB -> Serial Adapter</a> (not needed if you have a computer with a serial port)</li>
+    <li><a href="https://www.amazon.com/StarTech-com-10-Feet-Straight-Through-Serial/dp/B000A7NROO/ref=sr_1_1?ie=UTF8&qid=1474572167&sr=8-1&keywords=10-Feet+Straight+Through+Serial+Cable+-+M%2FF+.">10 foot Serial cord</a></li>
 </ul>
 
 <p>If your computer has a built in serial port, you will have to update line 5 to use the correct serial port. /dev/ttyUSB0 is used when there is a USB serial port.</p>
@@ -32,7 +32,7 @@ caption{ font-weight: bold;}
 
 <p>Aftering hooking everything up and powering it on(I always made sure the Pi was on first before turning on the Monoprice unit) you need to install Python. If you are using a Pi, you should be able to type in these commands to download and install Python.</p>
 
-<code>sudo apt-get update</code>
+<code>sudo apt-get update</code><br><br>
 
 <code>sudo apt-get install python3-picamera</code>
 
