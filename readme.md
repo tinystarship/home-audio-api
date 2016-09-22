@@ -2,11 +2,11 @@
 
 # Table of Contents
 1. [What is this script] (#what-is-this-script)
-1. [Requirements](#requirements)
+2. [Requirements](#requirements)
 3. [Installation](#installation)
-2. [Endpoint URLs](#endpoint-urls)
-3. [Available Zones](#available-zones)
-4. [Sending Commands](#sending-commands)
+4. [Endpoint URLs](#endpoint-urls)
+5. [Available Zones](#available-zones)
+6. [Sending Commands](#sending-commands)
   1. [Example Commands](#example-commands)
   2. [Toggle Power](#toggle-power)
   3. [Change Sources](#change-sources)

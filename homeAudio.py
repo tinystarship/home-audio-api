@@ -1,4 +1,3 @@
-#from bottle import Bottle, run, template, get, post, request
 from bottle import Bottle, run, template, request
 import serial, time, socket
 
@@ -19,46 +18,37 @@ def index():
 @app.route('/status')
 def fullstatus():
 	ser.open()
-	ser.write("?11PR\r\n")
-	time.sleep(1)
-	response = ser.read(9)
-	print response
+
+	count = 1
+	response = ""
+	while (count < 7):
+		command = "?1" + `count` + "PR\r\n"
+		ser.write(command)
+		line = ser.readline()
+		time.sleep(2)
+		response = response + "\r\n" + ser.read(20)
+		count = count + 1
 	return(response)
 	ser.close()
 
 @app.route('/status/<zone>')
 def status(zone='11'):
 	ser.open()
-	print zone
 	command = "?%sPR\r\n" % (zone)
-	print command
 	ser.write(command)
-	time.sleep(1)
+	time.sleep(2)
 	response = ser.read(20)
-	print response
 	ser.close()
-	return template('command:{{status}}', status=response)
-	#return response
+	return response
 
 @app.route('/send', method='POST')
 def sendCommand():
-	#print command
-	#ser.open()
-	#ser.write(command)
-	#time.sleep(1)
-	#response = ser.read(9)
-	#print response
-	#return template('command:{{response}}', response=response)
-	#ser.close()
-
 	command = request.forms.get('command')
 	command="<%s\r\n" % (command)
-	print command
 	ser.open()
 	ser.write(command)
-	time.sleep(1)
-	response = ser.read(9)
-	print response
+	time.sleep(2)
+	response = ser.read(20)
 	return template('command:{{status}}', status=response)
 	ser.close()
 
