@@ -22,8 +22,10 @@ To actually use this script, you need a few things:
 
 1. [Monoprice Whole Home Audio Controller](http://www.monoprice.com/product?p_id=10761). 
 2. [Raspberry Pi 2](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=raspberry+pi+) (any computer that can run python will work, this is just what I used)
-3. [USB -> Serial Adapter](https://www.amazon.com/TRENDnet-TU-S9-USB-Serial-Converter/dp/B0007T27H8/ref=sr_1_1?ie=UTF8&qid=1474572139&sr=8-1&keywords=TRENDnet+TU-S9+USB+to+Serial+Converter) (not needed if you have a computer with a serial port*
+3. [USB -> Serial Adapter](https://www.amazon.com/TRENDnet-TU-S9-USB-Serial-Converter/dp/B0007T27H8/ref=sr_1_1?ie=UTF8&qid=1474572139&sr=8-1&keywords=TRENDnet+TU-S9+USB+to+Serial+Converter) (not needed if you have a computer with a serial port)
 4. [10 foot Serial cord](https://www.amazon.com/StarTech-com-10-Feet-Straight-Through-Serial/dp/B000A7NROO/ref=sr_1_1?ie=UTF8&qid=1474572167&sr=8-1&keywords=10-Feet+Straight+Through+Serial+Cable+-+M%2FF+.) 
+
+If your computer has a built in serial port, you will have to update line 5 to use the correct serial port. `/dev/ttyUSB0` is used when there is a USB serial port. 
 
 # Installation
 Aftering hooking everything up and powering it on(I always made sure the Pi was on first before turning on the Monoprice unit) you need to install Python. If you are using a Pi, you should be able to type in these commands to download and install Python.
@@ -41,7 +43,7 @@ Open a command prompt and browse to the project directory and run
 That should do it!
   
 # Endpoint URLs
-*Where 0.0.0.0 is the LAN ip address of your raspberry pi
+*Where 0.0.0.0 is the ip address of your raspberry pi
 
 Instructions:
 http://0.0.0.0/
@@ -50,7 +52,8 @@ Get Unit Status:
 http://0.0.0.0/status
 
 Get Zone Status:
-http://0.0.0.0/status/(zone) 
+*replace zone below with a number from below. For example, 11 to get Zone 1 on Unit 1.*
+http://0.0.0.0/status/(zone)  
 
 Send Command:
 http://0.0.0.0/send 
