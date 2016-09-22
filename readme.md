@@ -13,7 +13,9 @@
   4. [Adjust Audio](#adjust-audio)
 
 # What is this script
-In the fall of 2015 I purchased a whole home audio controller from monoprice. I wanted to control it from my phone. I taught myself Swift and released an app called [Home Audio](https://itunes.apple.com/us/app/home-audio/id1056245809?ls=1&mt=8). It required a special ethernet -> serial adapter to hookup the monoprice's serial adapter to the network, but it worked great. I had a Raspberry Pi 2 sitting in a box looking for a project, so I decided to create a simple Web API for a cheaper option.   
+In the fall of 2015 I purchased a whole home audio controller from monoprice. I wanted to control it from my phone. I taught myself Swift and released an app called [Home Audio](https://itunes.apple.com/us/app/home-audio/id1056245809?ls=1&mt=8). It required a special ethernet -> serial adapter to hookup the monoprice's serial adapter to the network, but it worked great. I had a Raspberry Pi 2 sitting in a box looking for a project, so I decided to create a simple Web API for a cheaper option.
+
+Please be aware, this is not the fastest thing in the world. We're going across a serial port. To refresh the status of everything can take some time. Pushing commands should be pretty quick though, I've gotten responses in 1-2 seconds.   
 
 # Requirements
 To actually use this script, you need a few things:
