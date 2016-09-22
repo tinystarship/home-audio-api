@@ -43,7 +43,7 @@ Open a command prompt and browse to the project directory and run
 That should do it!
   
 # Endpoint URLs
-*Where 0.0.0.0 is the ip address of your raspberry pi
+*Where 0.0.0.0 is the IP address of your Raspberry Pi *
 
 Instructions:
 http://0.0.0.0/
