@@ -102,7 +102,7 @@ To send a command you need to send a POST request to the url with a json payload
 
 There are many different ways to send a request. To test it out, you can download a utility called curl and send the commands from a command prompt like this:<br><br>
 
-<code>curl -i -X POST -d '{"command":"11PR01"}' http://{{ipaddress}}/send</code>
+<code>curl -d "command=11PR01" http://{{ipaddress}}/send</code>
 
 <H3>Example Commands</H3>
 The first number in each command is the unit you are targeting. The master unit is always 1. If you had a 2nd or third slave unit, you would substitute the first 1 with a 2 or 3 depending on which unit you wanted to control.<br>
