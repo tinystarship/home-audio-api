@@ -78,7 +78,7 @@ To send a command you need to send a POST request to the url with a json payload
 
 There are many different ways to send a request. To test it out, you can download a utility called curl and send the commands from a command prompt like this:
 
-`curl -i -X POST -d '{"command":"11PR01"}' http://0.0.0.0/send`
+`curl -d "command=11PR01" http://0.0.0.0/send`
 
 ###Example Commands
 
